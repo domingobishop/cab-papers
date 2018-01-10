@@ -1,11 +1,11 @@
 # Training
 # import libraries
 import functions
-import guardian
+import processor
 
 
 def get_guardian_comments_summary(n):
-    url = guardian.guardian_urls()
+    url = processor.guardian_urls()
     all_article_urls = functions.get_all_article_urls(url, 'data-link-name', 'article')
     all_article_urls = list(set(all_article_urls))
     comment_summaries = []
