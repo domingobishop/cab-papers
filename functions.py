@@ -71,7 +71,16 @@ def summarize(text, n, training=False, count=110):
         'could',
         'mr.',
         'mp',
-        'made'
+        'made',
+        '\'\'',
+        'line',
+        'two',
+        'sir',
+        'general',
+        'de',
+        'la',
+        'le',
+        'des'
     ]
 
     if n <= len(sentences):
