@@ -68,7 +68,10 @@ def summarize(text, n, training=False, count=110):
         'week',
         'get',
         'yet',
-        'could'
+        'could',
+        'mr.',
+        'mp',
+        'made'
     ]
 
     if n <= len(sentences):
@@ -78,7 +81,7 @@ def summarize(text, n, training=False, count=110):
         new_words = [word for word in words if word not in _stopwords]
         freq = FreqDist(new_words)
 
-        top_3 = nlargest(3, freq, key=freq.get)
+        top = nlargest(6, freq, key=freq.get)
 
         ranking = defaultdict(int)
 
@@ -92,7 +95,7 @@ def summarize(text, n, training=False, count=110):
         if training:
             return summary
         else:
-            return [summary, top_3[0], top_3[1], top_3[2]]
+            return [summary, top[0], top[1], top[2], top[3], top[4], top[5]]
     else:
         return ''
 
