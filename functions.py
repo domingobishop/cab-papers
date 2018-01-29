@@ -80,7 +80,13 @@ def summarize(text, n, training=False, count=110):
         'de',
         'la',
         'le',
-        'des'
+        'des',
+        'les',
+        'et',
+        'en',
+        'du',
+        'january',
+        'hon'
     ]
 
     if n <= len(sentences):
